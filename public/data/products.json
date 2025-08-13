@@ -1,0 +1,103 @@
+{
+  "store_info": {
+    "name": "VibeMart",
+    "tagline": "Your Ultimate Shopping Destination",
+    "description": "Discover amazing products that match your vibe at VibeCart. Shop electronics, fashion, home goods and more with free shipping and secure checkout."
+  },
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Bluetooth Headphones",
+      "category": "Electronics",
+      "price": 79.99,
+      "original_price": 99.99,
+      "rating": 4.0,
+      "reviews": 324,
+      "on_sale": true,
+      "image": "images/wireless-bluetooth-headphones.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Smart Fitness Watch",
+      "category": "Electronics",
+      "price": 199.99,
+      "original_price": 249.99,
+      "rating": 4.0,
+      "reviews": 189,
+      "on_sale": true,
+      "image": "images/smart-fitness-watch.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Designer Leather Handbag",
+      "category": "Fashion",
+      "price": 149.99,
+      "rating": 4.0,
+      "reviews": 267,
+      "on_sale": false,
+      "image": "images/designer-leather-handbag.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Organic Cotton T-Shirt",
+      "category": "Fashion",
+      "price": 29.99,
+      "rating": 4.0,
+      "reviews": 156,
+      "on_sale": false,
+      "image": "images/organic-cotton-t-shirt.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Ceramic Dinnerware Set",
+      "category": "Home & Garden",
+      "price": 89.99,
+      "original_price": 119.99,
+      "rating": 4.0,
+      "reviews": 98,
+      "on_sale": true,
+      "image": "images/ceramic-dinnerware-set.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Yoga Exercise Mat",
+      "category": "Sports",
+      "price": 39.99,
+      "rating": 4.0,
+      "reviews": 203,
+      "on_sale": false,
+      "image": "images/yoga-exercise-mat.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Best Seller Novel Collection",
+      "category": "Books",
+      "price": 24.99,
+      "rating": 4.0,
+      "reviews": 445,
+      "on_sale": false,
+      "image": "images/best-seller-novel-collection.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Natural Skincare Set",
+      "category": "Beauty",
+      "price": 59.99,
+      "original_price": 79.99,
+      "rating": 4.0,
+      "reviews": 178,
+      "on_sale": true,
+      "image": "images/natural-skincare-set.jpg"
+    }
+  ],
+  "categories": [
+    "All Categories",
+    "Electronics",
+    "Fashion",
+    "Home & Garden",
+    "Sports",
+    "Books",
+    "Beauty"
+  ],
+  "total_products": 8
+}
