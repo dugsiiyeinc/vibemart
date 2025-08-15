@@ -129,8 +129,8 @@ VibeMart/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/vibemart.git
-cd vibecart
+git clone https://github.com/dugsiiyeinc/vibemart.git
+cd vibemart
 ```
 
 2. Install dependencies:
