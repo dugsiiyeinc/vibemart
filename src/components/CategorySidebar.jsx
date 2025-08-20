@@ -1,12 +1,12 @@
-import data from "../../public/products.json";
+import data from "../../public/data/products.json";
 
 const CategorySidebar = ({
   onCategorySelect,
   onSortChange,
   onPriceChange,
   selectedCategory,
-  maxPrice,        // 👈 get from parent
-  sortOption       // 👈 get from parent
+  maxPrice,        
+  sortOption      
 }) => {
   const handleCategoryClick = (category) => {
     onCategorySelect(category);

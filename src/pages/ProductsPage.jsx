@@ -1,6 +1,6 @@
 import ProductsList from "../components/ProductsList";
 import CategorySidebar from "../components/CategorySidebar";
-import data from "../../public/products.json";
+import data from "../../public/data/products.json";
 import { useState } from "react";
 
 const ProductsPage = () => {
