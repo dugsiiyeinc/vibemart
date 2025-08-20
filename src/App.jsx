@@ -10,10 +10,24 @@ import CartPage from "./pages/CartPage";
 import LoginPage from "./pages/LoginPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import CheckoutPage from "./pages/CheckoutPage";
+import ProductContext from "./context/ProductContext";
+import { useEffect, useReducer } from "react";
+import { wishlistReducer } from "./context/wishlistReducer";
 
 function App() {
+  const initialWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+  const [wishlist, dispatchWishlist] = useReducer(
+    wishlistReducer,
+    initialWishlist,
+  );
+
+  useEffect(() => {
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+  }, [wishlist]);
+
   return (
-    <>
+    <ProductContext.Provider value={{ wishlist, dispatchWishlist }}>
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -27,7 +41,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-    </>
+    </ProductContext.Provider>
   );
 }
 
