@@ -23,11 +23,12 @@ const ProductDetailsPage = () => {
 
   const product = data.products.find((p) => id == p.id);
 
-  const { dispatchWishlist } = useContext(ProductContext);
+  const { wishlist, dispatchWishlist } = useContext(ProductContext);
 
-  const handleAddWishlist = () => {
-    dispatchWishlist({ type: "ADD_TO_WISHLIST", payload: product });
+  const handleToggleWishlist = () => {
+    dispatchWishlist({ type: "TOGGLE_WISHLIST", payload: product });
   };
+
 
   return (
     <section className="min-h-full bg-[#F9F9F9]">
@@ -45,11 +46,9 @@ const ProductDetailsPage = () => {
               <span>Products</span> <RiArrowRightSLine />
             </div>
           </Link>
-          <Link to="/products">
             <div className="hover:text-accent flex items-center gap-2">
               <span>{product.name}</span>
             </div>
-          </Link>
         </nav>
 
         {/* product img & info */}
@@ -66,8 +65,6 @@ const ProductDetailsPage = () => {
               src={product.image}
               alt="photo"
             />
-
-        
           </div>
 
           {/* product info */}
@@ -128,17 +125,26 @@ const ProductDetailsPage = () => {
             </div>
 
             {/* cta buttons */}
-            <div className="mt-6 flex flex-col md:flex-row gap-4">
+            <div className="mt-6 flex flex-col gap-4 md:flex-row">
               <button className="bg-accent flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg py-4 text-lg font-bold text-white hover:bg-yellow-500">
                 <RiShoppingCart2Line />
                 <span>Add to Cart</span>
               </button>
+
               <button
-                onClick={handleAddWishlist}
-                className="bg-pink flex md:w-2/4 cursor-pointer items-center justify-center gap-2 rounded-lg border py-4 text-lg font-bold text-white hover:bg-pink-700"
+                onClick={handleToggleWishlist}
+                className={`flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg border py-4 text-lg font-bold ${
+                  wishlist.find((item) => item.id === product.id)
+                    ? "border-pink bg-pink hover:bg-pink text-white"
+                    : "border-accent text-accent hover:bg-accent bg-transparent hover:text-white"
+                }`}
               >
                 <RiHeartFill />
-                <span>Add to Wishlist</span>
+                <span>
+                  {wishlist.find((item) => item.id === product.id)
+                    ? "Remove from Wishlist"
+                    : "Add to Wishlist"}
+                </span>
               </button>
             </div>
 
@@ -166,36 +172,34 @@ const ProductDetailsPage = () => {
               </ul>
             </div>
           </div>
-          
         </div>
         {/* related product */}
-            <div className="mt-12 mb-6 max-w-[300px]">
-              {data.products.filter(
-                (relatedProduct) =>
-                  relatedProduct.name !== product.name &&
-                  relatedProduct.category === product.category,
-              ).length > 0 && (
-                <>
-                  <h4 className="mb-4 text-2xl font-bold">Related Products</h4>
-                  {data.products
-                    .filter(
-                      (relatedProduct) =>
-                        relatedProduct.name !== product.name &&
-                        relatedProduct.category === product.category,
-                    )
-                    .map((relatedProduct) => (
-                      <Link
-                        key={relatedProduct.id}
-                        to={`/products/${relatedProduct.id}`}
-                      >
-                        <ProductCard product={relatedProduct} />
-                      </Link>
-                    ))}
-                </>
-              )}
-            </div>
+        <div className="mt-12 mb-6 max-w-[300px]">
+          {data.products.filter(
+            (relatedProduct) =>
+              relatedProduct.name !== product.name &&
+              relatedProduct.category === product.category,
+          ).length > 0 && (
+            <>
+              <h4 className="mb-4 text-2xl font-bold">Related Products</h4>
+              {data.products
+                .filter(
+                  (relatedProduct) =>
+                    relatedProduct.name !== product.name &&
+                    relatedProduct.category === product.category,
+                )
+                .map((relatedProduct) => (
+                  <Link
+                    key={relatedProduct.id}
+                    to={`/products/${relatedProduct.id}`}
+                  >
+                    <ProductCard product={relatedProduct} />
+                  </Link>
+                ))}
+            </>
+          )}
+        </div>
       </div>
-      
     </section>
   );
 };
