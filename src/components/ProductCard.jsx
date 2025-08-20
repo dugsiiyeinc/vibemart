@@ -16,69 +16,69 @@ export default function ProductCard({ product, showDelete = false }) {
   const isInWishlist = wishlist.some((item) => item.id === product.id);
 
   return (
-    <div className="bg-white rounded-lg cursor-pointer overflow-hidden shadow-lg transition relative">
+    <div className="relative cursor-pointer overflow-hidden rounded-lg bg-white shadow-lg transition">
       {/* Sale Badge */}
       {product.on_sale && (
-        <span className="absolute z-10 top-3 left-3 bg-pink text-white px-2 py-1 text-xs font-semibold rounded">
+        <span className="bg-pink absolute top-3 left-3 z-10 rounded px-2 py-1 text-xs font-semibold text-white">
           Sale
         </span>
       )}
 
       {/* Wishlist heart */}
 
-        <button
-          className="absolute top-3 z-10 right-3 bg-white rounded-full p-2 shadow hover:scale-110 transition-transform"
-          onClick={() =>
-            dispatchWishlist({
-              type: isInWishlist ? "REMOVE_FROM_WISHLIST" : "ADD_TO_WISHLIST",
-              payload: product,
-            })
-          }
-        >
-          {isInWishlist ? (
-            <RiHeartFill className="text-pink" />
-          ) : (
-            <RiHeartLine className="text-gray-400" />
-          )}
-        </button>
+      <button
+        className="absolute top-3 right-3 z-10 rounded-full bg-white p-2 shadow transition-transform hover:scale-110"
+        onClick={() =>
+          dispatchWishlist({
+            type: "TOGGLE_WISHLIST",
+            payload: product,
+          })
+        }
+      >
+        {wishlist.some((item) => item.id === product.id) ? (
+          <RiHeartFill className="text-pink" />
+        ) : (
+          <RiHeartLine className="text-gray-400" />
+        )}
+      </button>
 
       {/* Image */}
       <Link to={`/products/${product.id}`}>
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-64 object-cover object-top rounded hover:scale-110 transition overflow-hidden"
+          className="h-64 w-full overflow-hidden rounded object-cover object-top transition hover:scale-110"
         />
       </Link>
 
       {/* Product info */}
-      <div className="p-4 space-y-3">
+      <div className="space-y-3 p-4">
         {/* Rating */}
         <div className="flex items-center gap-2">
           <div className="flex items-center gap-0.5">
-            <BsFillStarFill className="text-[#facc15] text-sm" />
-            <BsFillStarFill className="text-[#facc15] text-sm" />
-            <BsFillStarFill className="text-[#facc15] text-sm" />
-            <BsFillStarFill className="text-[#facc15] text-sm" />
-            <BiStar className="text-[#facc15] text-sm" />
+            <BsFillStarFill className="text-sm text-[#facc15]" />
+            <BsFillStarFill className="text-sm text-[#facc15]" />
+            <BsFillStarFill className="text-sm text-[#facc15]" />
+            <BsFillStarFill className="text-sm text-[#facc15]" />
+            <BiStar className="text-sm text-[#facc15]" />
           </div>
           <span className="text-sm">({product.reviews})</span>
         </div>
 
         {/* Name */}
-        <h3 className="font-semibold hover:text-accent text-gray-800">
+        <h3 className="hover:text-accent font-semibold text-gray-800">
           {product.name}
         </h3>
 
         {/* Price & category */}
-        <div className="flex justify-between items-center text-lg font-bold text-accent">
+        <div className="text-accent flex items-center justify-between text-lg font-bold">
           ${product.price.toFixed(2)}
           {product.original_price && (
-            <span className="text-gray-400 line-through text-sm ml-4">
+            <span className="ml-4 text-sm text-gray-400 line-through">
               ${product.original_price.toFixed(2)}
             </span>
           )}
-          <span className="text-gray-500 text-sm font-medium bg-gray-100  p-2 rounded-lg">
+          <span className="rounded-lg bg-gray-100 p-2 text-sm font-medium text-gray-500">
             {product.category}
           </span>
         </div>
@@ -86,7 +86,7 @@ export default function ProductCard({ product, showDelete = false }) {
         {/* Add to Cart & Delete */}
         <div className="flex gap-2">
           <Link
-            className="w-full flex cursor-pointer items-center gap-2 justify-center bg-accent hover:bg-yellow-500 text-white font-semibold py-1 rounded-lg"
+            className="bg-accent flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg py-1 font-semibold text-white hover:bg-yellow-500"
             to={`/products/${product.id}`}
           >
             <RiShoppingCart2Line />
@@ -95,10 +95,10 @@ export default function ProductCard({ product, showDelete = false }) {
 
           {showDelete && (
             <button
-              className="text-accent cursor-pointer border border-accent p-2 rounded-lg hover:bg-accent hover:text-white"
+              className="text-accent border-accent hover:bg-accent cursor-pointer rounded-lg border p-2 hover:text-white"
               onClick={() =>
                 dispatchWishlist({
-                  type: "REMOVE_FROM_WISHLIST",
+                  type: "TOGGLE_WISHLIST",
                   payload: product,
                 })
               }
