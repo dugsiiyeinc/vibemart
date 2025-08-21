@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { BiStar } from "react-icons/bi";
 import { BsFillStarFill } from "react-icons/bs";
+import { FaStar } from "react-icons/fa";
 import {
   RiDeleteBinLine,
   RiHeartFill,
