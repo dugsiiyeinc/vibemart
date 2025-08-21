@@ -65,20 +65,22 @@ The platform is ideal for demonstration purposes, online retail startups, and UI
 
 ## 🖼 Screenshots
 
-### **1. Product Listing Page**
-
-Displays all available products with sorting, filtering, and category selection.  
-![All Products Page](./screenshots/all-products.png)
-
-### **2. Homepage**
+### **1. Homepage**
 
 Includes hero banner, featured products, and quick navigation to shopping sections.  
-![Homepage](./screenshots/homepage.png)
+![Homepage](public/screenshots/screenshot-home.png)
+
+### **2. Product Listing Page**
+
+Displays all available products with sorting, filtering, and category selection.  
+![All Products Page](public/screenshots/screenshot-cart.png)
+
+![Product Page](public/screenshots/screenshot-product-details.png)
 
 ### **3. Orders Page**
 
 Shows order history with an empty state for new customers.  
-![Orders Page](./screenshots/orders.png)
+![Orders Page](public/screenshots/screenshot-orders.png)
 
 ---
 

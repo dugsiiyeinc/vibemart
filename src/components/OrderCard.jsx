@@ -13,7 +13,7 @@ export default function OrderCard({ order }) {
               <h3 className="font-semibold text-[#363636]">
                 Order #{order.id}
               </h3>
-              <p className="text-sm text-gray-600">Placed on</p>
+              <p className="text-sm text-gray-600">Placed on 8/21/2025</p>
             </div>
 
             <span className="flex items-center gap-2 rounded-full bg-yellow-100 px-3 py-1 text-sm font-medium text-yellow-800">
@@ -23,7 +23,7 @@ export default function OrderCard({ order }) {
           </div>
           <div className="mt-2 md:mt-0">
             <span className="text-lg font-bold text-[#feba17]">
-              ${order.grandTotal}
+              ${order.grandTotal.toFixed(2)}
             </span>
           </div>
         </div>
