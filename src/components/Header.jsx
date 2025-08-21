@@ -6,13 +6,15 @@ import {
   RiShoppingCartLine,
 } from "react-icons/ri";
 import { getCartCount } from "../utils/cartUtils";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import ProductContext from "../context/ProductContext";
+import { useAuth } from "../context/AuthContext";
 
 const Header = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   const { cart, wishlist } = useContext(ProductContext);
+  const { user, dispatch } = useAuth();
 
   return (
     <header className="border-b border-gray-200 py-3 shadow-md">
@@ -77,14 +79,26 @@ const Header = () => {
             </span>
           </div>
 
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "text-accent" : "hover:text-accent"
-            }
-            to="/login"
-          >
-            <span className="font-medium text-[#0d7a7f]">Login</span>
-          </NavLink>
+          {user ? (
+            <div className="flex items-center space-x-2">
+              <span className="text-sm text-[#363636]">
+                Hello, {user.fullname}
+              </span>
+              <button
+                onClick={() => dispatch({ type: "LOGOUT" })}
+                className="cursor-pointer text-sm text-[#119da5] hover:text-[#0d7a7f]"
+              >
+                Logout
+              </button>
+            </div>
+          ) : (
+            <Link
+              to="/login"
+              className="cursor-pointer font-medium text-[#119da5] hover:text-[#0d7a7f]"
+            >
+              Login
+            </Link>
+          )}
         </div>
 
         {/* menu  */}
