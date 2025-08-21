@@ -23,7 +23,16 @@ const ProductDetailsPage = () => {
 
   const product = data.products.find((p) => id == p.id);
 
-  const { wishlist, dispatchWishlist } = useContext(ProductContext);
+  const { dispatch, wishlist, dispatchWishlist } = useContext(ProductContext);
+
+  const handleAddCart = () => {
+    dispatch({
+      type: "ADD_TO_CART",
+      payload: { ...product, quantity },
+    });
+  };
+
+
 
   const handleToggleWishlist = () => {
     dispatchWishlist({ type: "TOGGLE_WISHLIST", payload: product });
@@ -61,7 +70,7 @@ const ProductDetailsPage = () => {
               </span>
             )}
             <img
-              className="h-96 w-full rounded-lg object-cover object-top shadow-lg lg:h-[500px]"
+              className="h-96 w-full  rounded-lg object-cover object-top shadow-lg lg:h-[500px]"
               src={product.image}
               alt="photo"
             />
@@ -126,7 +135,10 @@ const ProductDetailsPage = () => {
 
             {/* cta buttons */}
             <div className="mt-6 flex flex-col gap-4 md:flex-row">
-              <button className="bg-accent flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg py-4 text-lg font-bold text-white hover:bg-yellow-500">
+              <button
+                onClick={handleAddCart}
+              
+              className="bg-accent flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg py-4 text-lg font-bold text-white hover:bg-yellow-500">
                 <RiShoppingCart2Line />
                 <span>Add to Cart</span>
               </button>

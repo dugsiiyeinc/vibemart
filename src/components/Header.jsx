@@ -5,7 +5,7 @@ import {
   RiMenu3Fill,
   RiShoppingCartLine,
 } from "react-icons/ri";
-
+import { getCartCount } from "../utils/cartUtils";
 import { NavLink } from "react-router";
 import ProductContext from "../context/ProductContext";
 
@@ -14,7 +14,7 @@ const Header = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
 
-  const {  wishlist } = useContext(ProductContext);
+  const { cart, wishlist } = useContext(ProductContext);
 
   return (
     <header className="border-b border-b-gray-200 shadow-md py-3">
@@ -75,7 +75,8 @@ const Header = () => {
               <RiShoppingCartLine className="text-xl" />{" "}
             </NavLink>
             <span className="bg-accent absolute -top-4 left-3 w-5 h-5 flex justify-center items-center text-white rounded-full">
-              0
+              {getCartCount(cart)}
+              
             </span>
           </div>
 
