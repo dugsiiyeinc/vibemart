@@ -17,6 +17,8 @@ const reducer = (orders, action) => {
           badge: "Processing",
         },
       ];
+    default:
+      return orders;
   }
 };
 
