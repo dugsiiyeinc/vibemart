@@ -5,12 +5,12 @@ import CTA from "../components/CTA";
 
 const HomePage = () => {
   return (
-    <div>
+    <>
       <Hero />
       <WhatWeDo />
       <FeaturedProducts />
       <CTA />
-    </div>
+    </>
   );
 };
 
