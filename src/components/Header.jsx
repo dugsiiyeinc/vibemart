@@ -9,22 +9,20 @@ import { getCartCount } from "../utils/cartUtils";
 import { NavLink } from "react-router";
 import ProductContext from "../context/ProductContext";
 
-
 const Header = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
-
 
   const { cart, wishlist } = useContext(ProductContext);
 
   return (
-    <header className="border-b border-b-gray-200 shadow-md py-3">
-      <div className="max-w-7xl mx-auto px-6 flex h-16  items-center justify-between">
-        <h1 className="font-pacifico font-extrabold text-accent text-2xl">
-          VibeCart
+    <header className="border-b border-gray-200 py-3 shadow-md">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
+        <h1 className="font-pacifico text-accent text-2xl font-extrabold">
+          VibeMart
         </h1>
 
         {/* desktop links */}
-        <nav className="space-x-8 text-base hidden md:block">
+        <nav className="hidden space-x-8 text-base md:block">
           <NavLink
             className={({ isActive }) =>
               isActive ? "text-accent" : "hover:text-accent"
@@ -51,63 +49,62 @@ const Header = () => {
           </NavLink>
         </nav>
         {/* nav icons  */}
-        <div className="flex items-center mt-2 gap-8 mr-16 md:mr-0">
+        <div className="mt-2 mr-16 flex items-center gap-8 md:mr-0">
           <div className="relative">
             <NavLink
               className={({ isActive }) =>
-                isActive ? "text-accent" : "hover:text-accent "
+                isActive ? "text-accent" : "hover:text-accent"
               }
               to="/wishlist"
             >
               <RiHeartLine className="text-xl" />{" "}
             </NavLink>
-            <span className="bg-pink absolute -top-4 left-3 w-5 h-5 flex justify-center items-center text-white rounded-full">
+            <span className="bg-pink absolute -top-4 left-3 flex h-5 w-5 items-center justify-center rounded-full text-white">
               {wishlist.length}
             </span>
           </div>
           <div className="relative">
             <NavLink
               className={({ isActive }) =>
-                isActive ? "text-accent" : "hover:text-accent "
+                isActive ? "text-accent" : "hover:text-accent"
               }
               to="/cart"
             >
               <RiShoppingCartLine className="text-xl" />{" "}
             </NavLink>
-            <span className="bg-accent absolute -top-4 left-3 w-5 h-5 flex justify-center items-center text-white rounded-full">
+            <span className="bg-accent absolute -top-4 left-3 flex h-5 w-5 items-center justify-center rounded-full text-white">
               {getCartCount(cart)}
-              
             </span>
           </div>
 
           <NavLink
             className={({ isActive }) =>
-              isActive ? " text-accent" : "hover:text-accent "
+              isActive ? "text-accent" : "hover:text-accent"
             }
             to="/login"
           >
-            <span className="text-[#0d7a7f]  font-medium">Login</span>
+            <span className="font-medium text-[#0d7a7f]">Login</span>
           </NavLink>
         </div>
 
         {/* menu  */}
-        <div className="absolute  right-6">
+        <div className="absolute right-6">
           {toggleMenu ? (
             <RiCloseFill
               onClick={() => setToggleMenu(!toggleMenu)}
-              className=" text-3xl md:hidden block cursor-pointer"
+              className="block cursor-pointer text-3xl md:hidden"
             />
           ) : (
             <RiMenu3Fill
               onClick={() => setToggleMenu(!toggleMenu)}
-              className=" text-3xl md:hidden block cursor-pointer"
+              className="block cursor-pointer text-3xl md:hidden"
             />
           )}
         </div>
       </div>
       {/* mobile links */}
       <nav
-        className={`space-x-8 md:hidden px-6 py-4 gap-4 font-semibold shadow-md text-base ${
+        className={`gap-4 space-x-8 px-6 py-4 text-base font-semibold shadow-md md:hidden ${
           toggleMenu ? "flex flex-col" : "hidden"
         }`}
       >

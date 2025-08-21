@@ -5,34 +5,29 @@ import { Link } from "react-router";
 
 const Hero = () => {
   return (
-    <div
-      style={{
-        backgroundImage:
-          'linear-gradient(rgba(0, 0, 0, 0.4),  rgba(0, 0, 0, 0.4)), url("https://readdy.ai/api/search-image?query=modern%20ecommerce%20shopping%20website%20hero%20background%20with%20vibrant%20colors%20golden%20orange%20accents%20clean%20minimalist%20design%20professional%20photography&width=1200&height=600&seq=hero1&orientation=landscape")',
-      }}
-      className="relative h-96 flex items-center flex-col justify-center bg-cover bg-center"
-    >
-     <div className="text-center px-4">
-       <h1 className="text-5xl md:text-7xl text-gray-50 font-bold mb-4">
-        Welcome to{" "}
-        <span className="text-accent font-pacifico font-bold">VibeCart</span>
-      </h1>
+    <div className="relative flex h-96 flex-col items-center justify-center bg-[linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url('images/hero.png')] bg-cover bg-center">
+      <div className="px-4 text-center">
+        <h1 className="mb-4 text-5xl font-bold text-gray-50 md:text-7xl">
+          Welcome to
+          <span className="text-accent font-pacifico font-bold">VibeMart</span>
+        </h1>
 
-      <p className="text-gray-300 text-2xl">Discover amazing products that match your vibe</p>
+        <p className="text-2xl text-gray-300">
+          Discover amazing products that match your vibe
+        </p>
+      </div>
 
-     </div>
-
-      <div className="mt-6 flex w-[80%] flex-col justify-center md:flex-row gap-4 text-gray-50">
+      <div className="mt-6 flex w-[80%] flex-col justify-center gap-4 text-gray-50 md:flex-row">
         <Link
-          to="/menu"
-          className="bg-accent font-bold justify-center flex items-center gap-2 text-lg px-6 py-3 rounded-lg hover:bg-accent"
+          to="/products"
+          className="bg-accent hover:bg-accent flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-lg font-bold"
         >
           <RiShoppingBagLine /> Shop Now
         </Link>
 
         <Link
-          to="/booking"
-          className="border justify-center  text-lg font-bold flex items-center gap-2 hover:text-accent  border-[#fff] px-6 py-3 rounded-lg hover:bg-[#fff]"
+          to="/products"
+          className="hover:text-accent flex items-center justify-center gap-2 rounded-lg border border-[#fff] px-6 py-3 text-lg font-bold hover:bg-[#fff]"
         >
           <BiSearch /> Browse Products
         </Link>
