@@ -7,13 +7,14 @@ import OrdersPage from "./pages/OrdersPage";
 import ThankYouPage from "./pages/ThankYouPage";
 import WishlistPage from "./pages/WishlistPage";
 import CartPage from "./pages/CartPage";
-import LoginPage from "./pages/LoginPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import ProductContext from "./context/ProductContext";
 import { useEffect, useReducer } from "react";
 import { wishlistReducer } from "./context/wishlistReducer";
 import { cartReducer } from "./context/cartReducer";
+import Auth from "./pages/Auth";
+import ProtectRoute from "./components/ProtectRoute";
 
 function App() {
   const initialCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -43,11 +44,13 @@ function App() {
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/products/:id" element={<ProductDetailsPage />} />
         <Route path="/orders" element={<OrdersPage />} />
-        <Route path="/checkout" element={<CheckoutPage />} />
-        <Route path="/thank-you" element={<ThankYouPage />} />
         <Route path="/wishlist" element={<WishlistPage />} />
         <Route path="/cart" element={<CartPage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/login" element={<Auth />} />
+        <Route element={<ProtectRoute />}>
+          <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/thank-you" element={<ThankYouPage />} />
+        </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </ProductContext.Provider>
