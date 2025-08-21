@@ -1,6 +1,6 @@
 import Hero from "../components/Hero";
 import WhatWeDo from "../components/WhatWeDo";
-// import FeaturedProducts from "../components/FeaturedProducts";
+import FeaturedProducts from "../components/FeaturedProducts";
 import CTA from "../components/CTA";
 
 const HomePage = () => {
@@ -8,7 +8,7 @@ const HomePage = () => {
     <div>
       <Hero />
       <WhatWeDo />
-      {/* <FeaturedProducts /> */}
+      <FeaturedProducts />
       <CTA />
     </div>
   );
