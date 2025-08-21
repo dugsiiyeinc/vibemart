@@ -2,7 +2,7 @@
   "store_info": {
     "name": "VibeMart",
     "tagline": "Your Ultimate Shopping Destination",
-    "description": "Discover amazing products that match your vibe at VibeMart. Shop electronics, fashion, home goods and more with free shipping and secure checkout."
+    "description": "Discover amazing products that match your vibe at VibeCart. Shop electronics, fashion, home goods and more with free shipping and secure checkout."
   },
   "products": [
     {
@@ -11,9 +11,10 @@
       "category": "Electronics",
       "price": 79.99,
       "original_price": 99.99,
-      "rating": 4.0,
+      "rating": 4.8,
       "reviews": 324,
       "on_sale": true,
+      "description": "Premium wireless headphones with noise cancellation and 30-hour battery life. Perfect for music lovers and professionals.",
       "image": "images/wireless-bluetooth-headphones.jpg"
     },
     {
@@ -22,9 +23,10 @@
       "category": "Electronics",
       "price": 199.99,
       "original_price": 249.99,
-      "rating": 4.0,
+      "rating": 4.6,
       "reviews": 189,
       "on_sale": true,
+      "description": "Advanced fitness tracking with heart rate monitoring, GPS, and 7-day battery life. Water resistant up to 50m.",
       "image": "images/smart-fitness-watch.jpg"
     },
     {
@@ -32,40 +34,45 @@
       "name": "Designer Leather Handbag",
       "category": "Fashion",
       "price": 149.99,
-      "rating": 4.0,
+      "rating": 4.9,
       "reviews": 267,
       "on_sale": false,
+      "description": "Handcrafted genuine leather handbag with multiple compartments. Timeless design that complements any outfit.",
       "image": "images/designer-leather-handbag.jpg"
     },
     {
       "id": 4,
-      "name": "Organic Cotton T-Shirt",
-      "category": "Fashion",
-      "price": 29.99,
-      "rating": 4.0,
-      "reviews": 156,
-      "on_sale": false,
-      "image": "images/organic-cotton-t-shirt.jpg"
-    },
-    {
-      "id": 5,
       "name": "Ceramic Dinnerware Set",
       "category": "Home & Garden",
       "price": 89.99,
       "original_price": 119.99,
-      "rating": 4.0,
+      "rating": 4.7,
       "reviews": 98,
       "on_sale": true,
+      "description": "16-piece ceramic dinnerware set. Microwave and dishwasher safe. Perfect for everyday dining and special occasions.",
       "image": "images/ceramic-dinnerware-set.jpg"
     },
+    {
+      "id": 5,
+      "name": "Organic Cotton T-Shirt",
+      "category": "Fashion",
+      "price": 29.99,
+      "rating": 4.5,
+      "reviews": 156,
+      "on_sale": false,
+      "description": "Soft, breathable organic cotton t-shirt in various colors. Sustainable fashion that feels great and looks amazing.",
+      "image": "images/organic-cotton-t-shirt.jpg"
+    },
+
     {
       "id": 6,
       "name": "Yoga Exercise Mat",
       "category": "Sports",
       "price": 39.99,
-      "rating": 4.0,
+      "rating": 4.4,
       "reviews": 203,
       "on_sale": false,
+      "description": "Non-slip yoga mat with extra cushioning. Made from eco-friendly materials. Perfect for yoga, pilates, and meditation.",
       "image": "images/yoga-exercise-mat.jpg"
     },
     {
@@ -73,9 +80,10 @@
       "name": "Best Seller Novel Collection",
       "category": "Books",
       "price": 24.99,
-      "rating": 4.0,
+      "rating": 4.8,
       "reviews": 445,
       "on_sale": false,
+      "description": "Collection of 3 bestselling novels from acclaimed authors. Perfect for book lovers and gift giving.",
       "image": "images/best-seller-novel-collection.jpg"
     },
     {
@@ -84,9 +92,10 @@
       "category": "Beauty",
       "price": 59.99,
       "original_price": 79.99,
-      "rating": 4.0,
+      "rating": 4.6,
       "reviews": 178,
       "on_sale": true,
+      "description": "Complete skincare routine with natural ingredients. Includes cleanser, toner, serum, and moisturizer.",
       "image": "images/natural-skincare-set.jpg"
     }
   ],
