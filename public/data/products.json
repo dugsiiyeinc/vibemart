@@ -15,7 +15,7 @@
       "reviews": 324,
       "on_sale": true,
       "description": "Premium wireless headphones with noise cancellation and 30-hour battery life. Perfect for music lovers and professionals.",
-      "image": "../public/images/wireless-bluetooth-headphones.jpg"
+      "image": "/images/wireless-bluetooth-headphones.jpg"
     },
     {
       "id": 2,
@@ -27,7 +27,7 @@
       "reviews": 189,
       "on_sale": true,
       "description": "Advanced fitness tracking with heart rate monitoring, GPS, and 7-day battery life. Water resistant up to 50m.",
-      "image": "../public/images/smart-fitness-watch.jpg"
+      "image": "/images/smart-fitness-watch.jpg"
     },
     {
       "id": 3,
@@ -38,7 +38,7 @@
       "reviews": 267,
       "on_sale": false,
       "description": "Handcrafted genuine leather handbag with multiple compartments. Timeless design that complements any outfit.",
-      "image": "../public/images/designer-leather-handbag.jpg"
+      "image": "/images/designer-leather-handbag.jpg"
     },
     {
       "id": 4,
@@ -50,7 +50,7 @@
       "reviews": 98,
       "on_sale": true,
       "description": "16-piece ceramic dinnerware set. Microwave and dishwasher safe. Perfect for everyday dining and special occasions.",
-      "image": "../public/images/ceramic-dinnerware-set.jpg"
+      "image": "/images/ceramic-dinnerware-set.jpg"
     },
     {
       "id": 5,
@@ -61,7 +61,7 @@
       "reviews": 156,
       "on_sale": false,
       "description": "Soft, breathable organic cotton t-shirt in various colors. Sustainable fashion that feels great and looks amazing.",
-      "image": "../public/images/organic-cotton-t-shirt.jpg"
+      "image": "/images/organic-cotton-t-shirt.jpg"
     },
 
     {
@@ -73,7 +73,7 @@
       "reviews": 203,
       "on_sale": false,
       "description": "Non-slip yoga mat with extra cushioning. Made from eco-friendly materials. Perfect for yoga, pilates, and meditation.",
-      "image": "../public/images/yoga-exercise-mat.jpg"
+      "image": "/images/yoga-exercise-mat.jpg"
     },
     {
       "id": 7,
@@ -84,7 +84,7 @@
       "reviews": 445,
       "on_sale": false,
       "description": "Collection of 3 bestselling novels from acclaimed authors. Perfect for book lovers and gift giving.",
-      "image": "../public/images/best-seller-novel-collection.jpg"
+      "image": "/images/best-seller-novel-collection.jpg"
     },
     {
       "id": 8,
@@ -96,7 +96,7 @@
       "reviews": 178,
       "on_sale": true,
       "description": "Complete skincare routine with natural ingredients. Includes cleanser, toner, serum, and moisturizer.",
-      "image": "../public/images/natural-skincare-set.jpg"
+      "image": "/images/natural-skincare-set.jpg"
     }
   ],
   "categories": [
