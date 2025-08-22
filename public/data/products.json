@@ -50,7 +50,7 @@
       "reviews": 98,
       "on_sale": true,
       "description": "16-piece ceramic dinnerware set. Microwave and dishwasher safe. Perfect for everyday dining and special occasions.",
-      "image": "/images/ceramic-dinnerware-set.jpg"
+      "image": "images/ceramic-dinnerware-set.jpg"
     },
     {
       
@@ -62,7 +62,7 @@
       "reviews": 156,
       "on_sale": false,
       "description": "Soft, breathable organic cotton t-shirt in various colors. Sustainable fashion that feels great and looks amazing.",
-      "image": "/images/organic-cotton-t-shirt.jpg"
+      "image": "images/organic-cotton-t-shirt.jpg"
     },
 
     {
@@ -74,7 +74,7 @@
       "reviews": 203,
       "on_sale": false,
       "description": "Non-slip yoga mat with extra cushioning. Made from eco-friendly materials. Perfect for yoga, pilates, and meditation.",
-      "image": "/images/yoga-exercise-mat.jpg"
+      "image": "images/yoga-exercise-mat.jpg"
     },
     {
       "id": 7,
@@ -85,7 +85,7 @@
       "reviews": 445,
       "on_sale": false,
       "description": "Collection of 3 bestselling novels from acclaimed authors. Perfect for book lovers and gift giving.",
-      "image": "/images/best-seller-novel-collection.jpg"
+      "image": "images/best-seller-novel-collection.jpg"
     },
     {
       "id": 8,
@@ -97,7 +97,7 @@
       "reviews": 178,
       "on_sale": true,
       "description": "Complete skincare routine with natural ingredients. Includes cleanser, toner, serum, and moisturizer.",
-      "image": "/images/natural-skincare-set.jpg"
+      "image": "images/natural-skincare-set.jpg"
     }
   ],
   "categories": [
