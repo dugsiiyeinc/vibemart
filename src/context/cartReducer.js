@@ -35,9 +35,7 @@ export const cartReducer = (state, action) => {
 
 
     case "CLEAR_CART":
-      return []; // Return an empty array to clear the cart
-    // -------------------------
-
+      return [];
 
     default:
       return state;
