@@ -44,7 +44,7 @@ The platform is ideal for demonstration purposes, online retail startups, and UI
 
 ## 🌐 Live Demo
 
-🔗 **Live Site**: [https://your-demo-link.com](https://your-demo-link.com)
+🔗 **Live Site**: [https://your-demo-link.com](https://vibemart-beige.vercel.app/)
 
 ---
 
