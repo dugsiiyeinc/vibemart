@@ -15,7 +15,7 @@
       "reviews": 324,
       "on_sale": true,
       "description": "Premium wireless headphones with noise cancellation and 30-hour battery life. Perfect for music lovers and professionals.",
-      "image": "/images/wireless-bluetooth-headphones.jpg"
+      "image": "images/wireless-bluetooth-headphones.jpg"
     },
     {
       "id": 2,
@@ -27,7 +27,7 @@
       "reviews": 189,
       "on_sale": true,
       "description": "Advanced fitness tracking with heart rate monitoring, GPS, and 7-day battery life. Water resistant up to 50m.",
-      "image": "/images/smart-fitness-watch.jpg"
+      "image": "images/smart-fitness-watch.jpg"
     },
     {
       "id": 3,
@@ -38,7 +38,7 @@
       "reviews": 267,
       "on_sale": false,
       "description": "Handcrafted genuine leather handbag with multiple compartments. Timeless design that complements any outfit.",
-      "image": "/images/designer-leather-handbag.jpg"
+      "image": "images/designer-leather-handbag.jpg"
     },
     {
       "id": 4,
@@ -53,7 +53,6 @@
       "image": "images/ceramic-dinnerware-set.jpg"
     },
     {
-      
       "id": 5,
       "name": "Organic Cotton T-Shirt",
       "category": "Fashion",
