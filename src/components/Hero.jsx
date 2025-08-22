@@ -5,7 +5,7 @@ import { Link } from "react-router";
 
 const Hero = () => {
   return (
-    <div className="relative flex h-96 flex-col items-center justify-center bg-[linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url('images/hero.png')] bg-cover bg-center">
+    <div className="relative flex h-96 flex-col items-center justify-center bg-[linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url('/images/hero.png')] bg-cover bg-center">
       <div className="px-4 text-center">
         <h1 className="mb-4 text-5xl font-bold text-gray-50 md:text-7xl">
           Welcome to
